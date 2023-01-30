@@ -334,3 +334,158 @@ a {
         display: none;
     }
 }
+
+/*HEADER PRINCIPAL*/
+
+.header-principal {
+    background: url("../images/hero/aot-home.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    height: 500px;
+    top: 44px;
+    min-height: 50vh;
+
+}
+
+.header-principal .contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.header-principal::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.39);
+}
+
+.descripcion-hero,
+.header-principal h3 {
+    position: relative;
+    z-index: 1;
+}
+
+.descripcion-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-principal h3 {
+    text-transform: capitalize;
+}
+
+.titulo-hero {
+    text-transform: uppercase;
+}
+
+.botones-hero {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-ver {
+    background: var(--color-secundario);
+}
+
+.año {
+    display: block;
+}
+
+.contenedor-generos {
+    margin-top: 10px;
+}
+
+.generos {
+    padding: 0px 10px;
+    margin-right: 10px;
+    border-left: 2px solid var(--color-secundario);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+/*QUERYS HEADER*/
+
+@media (min-width: 768px) {
+    .header-principal {
+        height: 600px;
+    }
+
+    .header-principal .contenedor {
+        justify-content: start;
+    }
+
+    .descripcion-hero {
+        margin-top: 100px;
+        align-items: start;
+        padding-left: 50px;
+    }
+
+    .botones-hero {
+        justify-content: start;
+    }
+
+    .btn-ver {
+        margin-left: 50px;
+    }
+
+    .sinopsis-hero {
+        display: flex;
+        max-width: 650px;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-principal {
+        top: 55px;
+    }
+
+    .descripcion-hero {
+        margin-top: 150px;
+    }
+
+    .titulo-hero {
+        font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    .titulo-hero .mini-texto,
+    .generos {
+        font-size: clamp(0.8rem, 1vw, 1.5rem);
+    }
+
+    .sinopsis-hero {
+        font-size: clamp(1rem, 1vw, 1.5rem);
+    }
+
+    .botones-hero {
+        margin-top: 50px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .sinopsis-hero {
+        max-width: 800px;
+    }
+
+    .botones-hero .btn {
+        padding: 10px 20px;
+    }
+
+    .botones-hero .btn p,
+    .botones-hero .btn a {
+        font-size: 20px;
+    }
+}
