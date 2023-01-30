@@ -12,6 +12,11 @@
     --fuente-principal: 'Lato', sans-serif;
 }
 
+body {
+    background: black;
+    color: white;
+}
+
 h1,
 h2,
 h3,
@@ -493,11 +498,6 @@ a {
 
 /*HISTORIAL*/
 
-.historial {
-    background: black;
-    color: white;
-}
-
 .historial .header h3 {
     text-transform: capitalize;
 }
@@ -509,8 +509,9 @@ a {
 }
 
 .items-historial .item {
-    height: 100px;
+    height: 120px;
     width: 75%;
+    max-width: 300px;
     position: relative;
 }
 
