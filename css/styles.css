@@ -87,3 +87,250 @@ a {
     font-weight: 400;
     font-size: 0.8rem;
 }
+
+/*NAVEGACION PRINCIPAL*/
+
+.navegacion-principal {
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+.navegacion-principal .logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: var(--color-secundario);
+}
+
+.btn-menu-movil,
+.btn-menu-desktop {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-menu-desktop {
+    display: none;
+}
+
+.linea-menu {
+    height: 1.2px;
+    width: 20px;
+    background: white;
+    margin: 3px;
+}
+
+.menu-movil {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -100%;
+    top: 0px;
+    background: black;
+    width: 80%;
+    height: 100vh;
+    max-width: 500px;
+}
+
+.header-menu-movil {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    align-items: center;
+}
+
+.btn-cerrar-menu-movil {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+
+.linea-cerrar-menu-movil {
+    width: 20px;
+    height: 1.5px;
+    background: white;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.linea-cerrar-menu-movil:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.link-menu-movil {
+    display: flex;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+.link-menu-movil p {
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+
+.icono-menu-movil {
+    width: 35px;
+    height: 35px;
+    display: flex;
+}
+
+.bottom-nav-movil {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-nav-movil .notificaciones,
+.bottom-nav-movil .buscador {
+    margin: 0px 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-nav-movil .usuario {
+    margin: 0px 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--color-secundario);
+}
+
+/*MEDIA QUERYS NAV*/
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        justify-content: start;
+    }
+
+    .btn-menu-movil {
+        display: none;
+    }
+
+    .btn-menu-desktop {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navegacion-principal {
+        padding: 10px 50px;
+    }
+
+    .nav-desktop {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .menu-movil {
+        display: none;
+    }
+
+    .buscador {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 15px;
+        padding: 2px 10px;
+    }
+
+    .buscador input {
+        padding: 5px 15px;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .notificaciones {
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 5px 0px 20px;
+    }
+
+
+    .usuario {
+        background: var(--color-secundario);
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+    }
+
+    .barra-nav-desktop {
+        display: block;
+        width: 50px;
+        min-height: calc(100vh - 55px);
+        background: black;
+        position: absolute;
+        top: 55px;
+        left: 0px;
+        transition: all .3s ease-in-out;
+    }
+
+    .barra-nav-desktop p {
+        text-transform: capitalize;
+        position: relative;
+        left: -50px;
+    }
+
+    .barra-nav-desktop:hover {
+        width: 200px;
+    }
+
+    .barra-nav-desktop:hover p {
+        left: 60px;
+    }
+
+    .link-menu-desktop {
+        display: flex;
+        overflow: hidden;
+        justify-content: start;
+        align-items: center;
+        height: 50px;
+        transition: all .1s ease-in-out;
+    }
+
+    .link-menu-desktop:hover {
+        background: var(--color-secundario);
+    }
+
+    .link-menu-desktop:hover .icono-menu-desktop {
+        background: var(--color-secundario);
+    }
+
+    .icono-menu-desktop {
+        transition: all .1s ease-in-out;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: black;
+        z-index: 99;
+    }
+
+    .bottom-nav-movil {
+        display: none;
+    }
+}
