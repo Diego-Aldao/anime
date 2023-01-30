@@ -7,5 +7,151 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="navegacion-principal">
+      <div class="logo">
+        <p>shingeki</p>
+      </div>
+      <div class="nav-desktop oculto">
+        <div class="buscador">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7klEQVR4nO2USwrCQBBE397PSr2OxhsoXkXEhajJxtsoeg6NN/G71ZGBCgQhTjJBFLGgITDVXUNNdeBX0QIiIAauqh0QAs2ywwfAGTAZdQL6ZYbfNWgJtIGKqgOsdHYDej62JDcfvuCNxDkCjSICUermLqzFnRcR2KvJ2uJCIK59+Ny4qKmag1sT11qaG+cCAnUfgVhNNi0udH0sCtVko+jCRtxZEYGmlsgoilkYi3Pw2eq+lsgoioHepCpbkpvbmuCJnpYo61dx0HDjY1OChpZoq/he9T1P2WLKirgwehJZ/EW+yq4pb8LsXYn6HB6EGmSrW6n6egAAAABJRU5ErkJggg=="
+          />
+          <input type="text" placeholder="Kimetsu no..." />
+        </div>
+        <div class="notificaciones">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAj0lEQVR4nO3QPw6CMBiH4W/jEDL2MHoYG1duaOJiZ2UpZ5D1JSRt7FJj/xAg+iZMTX5Pi8jPBCjg6T61BNDxrqs53ADa3dz3AM7zWel4Cxji3YFDyc3Nh/EQSX8JcPli3KdzgFsCcM0BxgTglQMkJX9gf79ov1GYrA7EAvpgp5faAUMA2CWAk0MscKwObLYJMhe2w5FdlcsAAAAASUVORK5CYII="
+          />
+        </div>
+        <div class="usuario"></div>
+      </div>
+      <div class="btn-menu-movil">
+        <span class="linea-menu"></span><span class="linea-menu"></span
+        ><span class="linea-menu"></span>
+      </div>
+      <div class="menu-movil oculto">
+        <header class="header-menu-movil">
+          <div class="btn btn-cerrar-menu-movil">
+            <span class="linea-cerrar-menu-movil"></span
+            ><span class="linea-cerrar-menu-movil linea-2"></span>
+          </div>
+          <div class="logo">
+            <p>shingeki</p>
+          </div>
+        </header>
+        <div class="link-menu-movil">
+          <div class="icono-menu-movil">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR4nGNgGAXEgv///5f/px6op6Ul9bT0ST3RQQa1DAyI5ZMMCBk4eC34TyZgGDQWwAAhjWQbPGoB0WA0DkaDiIHijDYKQAAA8Ngq1zSwABkAAAAASUVORK5CYII="
+            />
+          </div>
+          <p>inicio</p>
+        </div>
+        <div class="link-menu-movil">
+          <div class="icono-menu-movil">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmUlEQVR4nO3VsQnCQBiG4VQBJ7CRLGFpkVpXcBBXcAVXEBfJGtpY2IsQeCRygaBCckYLNS/8cHAf98L3F5ckPwkWOOhOlZ3HCGIer9nHCG58Kj8I2hl20MpQ0R9XhFE1bxcgwxqnMNU56y1Ajh1Kj5ThLu8jqLlgixmm2ODsjlcEx1DH5ElmjFXzc4oRFFgi7ZBNQ7boLPgqrlwADDnQZzD4AAAAAElFTkSuQmCC"
+            />
+          </div>
+          <p>guardados</p>
+        </div>
+        <div class="link-menu-movil">
+          <div class="icono-menu-movil">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABP0lEQVR4nN2UQU4CQRBFJxhYKFwEDiFHAGLgCAQShCOwNJ5D9BicQVwIQReeAU3cPVPj76Rjema6JSz0J5OQ+TX1hpqun2X/WkADGAL3wBZ412W/V/Iav20+AF6p1gvQT2lcA269Bo/ANdAGLnR1gDmw8epu7NkYgGv+CYzLHtLLTFSbQ2LG4ppfBvxcgftdD9Ir+6Bu5uOCmlwF3vTbZQ/UQwV2ItzMg2NBKvDOgCeVXIUKHmTOgn8xKwfIX6jkLmTuZLaPAHRUsg2ZB5nNKoCvH35Ltw8nAZQqZkRHSdlimp8KMBRgE7XyqdKiWXCZJskNYmSpKICtfTeifpn80ZWKDjK1Da0Iu3UqoOZB0PovtERN4FzRPfOiIR7ggXoKriq9qXaZBBCkbsFl2QI8axk/dBjsWI/85DRIEuBP6Avgd65F84DFsQAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <p>historial</p>
+        </div>
+        <div class="link-menu-movil">
+          <div class="icono-menu-movil">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR4nO3UwQ2AQAhE0SnPtf8KpJBvTPQqCay7UXlnwoQ5IM3CSZ3mxgQAK2DEGdDuAjLLL5t7bpa+H6AgKsBTFbmqondUZE+/63YMZJYDS7QB/dMOOBLBm1q+KZMAAAAASUVORK5CYII="
+            />
+          </div>
+          <p>calendario</p>
+        </div>
+        <div class="link-menu-movil">
+          <div class="icono-menu-movil">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUUlEQVR4nO3RuRGAMBTEUPVfFh7qEimR5x8QgP2yjTYQbBnqqY7bLpkdDPV47eD7bDYgcNBqwP9ZbEDioNSAdZhsQOEg1YD1GGxA4yDUgI0HXdBZ2YXH37BlAAAAAElFTkSuQmCC"
+            />
+          </div>
+          <p>categorias</p>
+        </div>
+        <div class="link-menu-movil">
+          <div class="icono-menu-movil">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyklEQVR4nO2UTQ7BQBhAZ+HnAN1ISFzBko0FGyfhAooToa7hBpJa4BKIbZ9M0sSkOu2MfnZ9qybNvNd836RK1UgBDIAbcNXP0vIGcOJDDDQlAyHfLKXkHeCeE3gAXYnADjvbqvIxkFDMRGqxGO+ovHBglf1US0AT+sp7wNMj8AL6PoEob9jKHtDsXeVTi4CSgGZWJm8BZ37nArSLAhuqs/ZarOeI7AsHDiUHcQxooqx8hDxDM7D4Q2BuBgLg6PDfcSFJXUHhla1RKW+/65jgIEsnygAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <p>reportar error</p>
+        </div>
+      </div>
+      <div class="barra-nav-desktop oculto">
+        <div class="link-menu-desktop">
+          <div class="icono-menu-desktop">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR4nGNgGAXEgv///5f/px6op6Ul9bT0ST3RQQa1DAyI5ZMMCBk4eC34TyZgGDQWwAAhjWQbPGoB0WA0DkaDiIHijDYKQAAA8Ngq1zSwABkAAAAASUVORK5CYII="
+            />
+          </div>
+          <p>inicio</p>
+        </div>
+        <div class="link-menu-desktop">
+          <div class="icono-menu-desktop">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmUlEQVR4nO3VsQnCQBiG4VQBJ7CRLGFpkVpXcBBXcAVXEBfJGtpY2IsQeCRygaBCckYLNS/8cHAf98L3F5ckPwkWOOhOlZ3HCGIer9nHCG58Kj8I2hl20MpQ0R9XhFE1bxcgwxqnMNU56y1Ajh1Kj5ThLu8jqLlgixmm2ODsjlcEx1DH5ElmjFXzc4oRFFgi7ZBNQ7boLPgqrlwADDnQZzD4AAAAAElFTkSuQmCC"
+            />
+          </div>
+          <p>guardados</p>
+        </div>
+        <div class="link-menu-desktop">
+          <div class="icono-menu-desktop">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABP0lEQVR4nN2UQU4CQRBFJxhYKFwEDiFHAGLgCAQShCOwNJ5D9BicQVwIQReeAU3cPVPj76Rjema6JSz0J5OQ+TX1hpqun2X/WkADGAL3wBZ412W/V/Iav20+AF6p1gvQT2lcA269Bo/ANdAGLnR1gDmw8epu7NkYgGv+CYzLHtLLTFSbQ2LG4ppfBvxcgftdD9Ir+6Bu5uOCmlwF3vTbZQ/UQwV2ItzMg2NBKvDOgCeVXIUKHmTOgn8xKwfIX6jkLmTuZLaPAHRUsg2ZB5nNKoCvH35Ltw8nAZQqZkRHSdlimp8KMBRgE7XyqdKiWXCZJskNYmSpKICtfTeifpn80ZWKDjK1Da0Iu3UqoOZB0PovtERN4FzRPfOiIR7ggXoKriq9qXaZBBCkbsFl2QI8axk/dBjsWI/85DRIEuBP6Avgd65F84DFsQAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <p>historial</p>
+        </div>
+        <div class="link-menu-desktop">
+          <div class="icono-menu-desktop">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVklEQVR4nO3UwQ2AQAhE0SnPtf8KpJBvTPQqCay7UXlnwoQ5IM3CSZ3mxgQAK2DEGdDuAjLLL5t7bpa+H6AgKsBTFbmqondUZE+/63YMZJYDS7QB/dMOOBLBm1q+KZMAAAAASUVORK5CYII="
+            />
+          </div>
+          <p>calendario</p>
+        </div>
+        <div class="link-menu-desktop">
+          <div class="icono-menu-desktop">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAUUlEQVR4nO3RuRGAMBTEUPVfFh7qEimR5x8QgP2yjTYQbBnqqY7bLpkdDPV47eD7bDYgcNBqwP9ZbEDioNSAdZhsQOEg1YD1GGxA4yDUgI0HXdBZ2YXH37BlAAAAAElFTkSuQmCC"
+            />
+          </div>
+          <p>categorias</p>
+        </div>
+        <div class="link-menu-desktop">
+          <div class="icono-menu-desktop">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyklEQVR4nO2UTQ7BQBhAZ+HnAN1ISFzBko0FGyfhAooToa7hBpJa4BKIbZ9M0sSkOu2MfnZ9qybNvNd836RK1UgBDIAbcNXP0vIGcOJDDDQlAyHfLKXkHeCeE3gAXYnADjvbqvIxkFDMRGqxGO+ovHBglf1US0AT+sp7wNMj8AL6PoEob9jKHtDsXeVTi4CSgGZWJm8BZ37nArSLAhuqs/ZarOeI7AsHDiUHcQxooqx8hDxDM7D4Q2BuBgLg6PDfcSFJXUHhla1RKW+/65jgIEsnygAAAABJRU5ErkJggg=="
+            />
+          </div>
+          <p>reportar error</p>
+        </div>
+      </div>
+    </nav>
+    <nav class="bottom-nav-movil">
+      <div class="notificaciones">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAj0lEQVR4nO3QPw6CMBiH4W/jEDL2MHoYG1duaOJiZ2UpZ5D1JSRt7FJj/xAg+iZMTX5Pi8jPBCjg6T61BNDxrqs53ADa3dz3AM7zWel4Cxji3YFDyc3Nh/EQSX8JcPli3KdzgFsCcM0BxgTglQMkJX9gf79ov1GYrA7EAvpgp5faAUMA2CWAk0MscKwObLYJMhe2w5FdlcsAAAAASUVORK5CYII="
+        />
+      </div>
+      <div class="buscador">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA90lEQVR4nO2TS4rCUBBFM9d2pG7Hzw5s3EoTHDRGnbgbpV2Hn52kjU71SOENBEF5FZWWxgsPEnJfnaJSN4r+pYAmMAHWwF5nBYyBxr3F+0DGdW2Bz3uKH1VoBrSAik4bmOvbAeiVGUve+dcNXyzPL1D3ACZ55wHeH3lHHsBGl1oB3o68Kw9gp0vVAO+HvJkHkDkAtTIA23lTO8DbLTMiC5FpHuBdyJt4AA2FyBTf8A3kSd2ptoQqRGgVO/ZPdLqFzk3fruIFSE8huqbUihfekzKQuoUIWGp993oe5WO5gPohAU3EF5DpG/JS4xo+HBCdIclTNupPdQLXKBYWEeCEJgAAAABJRU5ErkJggg=="
+        />
+      </div>
+      <div class="usuario"></div>
+    </nav>
+  </body>
 </html>
