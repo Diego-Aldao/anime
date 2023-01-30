@@ -345,7 +345,7 @@ a {
     color: white;
     position: relative;
     height: 500px;
-    top: 44px;
+    padding-top: 45px;
     min-height: 50vh;
 
 }
@@ -449,7 +449,7 @@ a {
 
 @media (min-width: 1024px) {
     .header-principal {
-        top: 55px;
+        padding-top: 55px;
     }
 
     .descripcion-hero {
