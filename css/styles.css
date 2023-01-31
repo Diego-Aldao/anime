@@ -103,6 +103,92 @@ a {
     margin-bottom: 20px;
 }
 
+.header-ver-mas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-ver-mas a {
+    text-transform: capitalize;
+}
+
+/*COMPONENTES*/
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.componente-grande {
+    height: 70vw;
+    max-height: 370px;
+    background: url(../images/nuevos/5e2beeeba2ad0.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.componente-grande:hover .nombre-componente-grande {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nombre-componente-grande {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+}
+
+.nombre-componente-grande span {
+    text-transform: capitalize;
+}
+
+.info-componente-grande {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 10px 10px;
+}
+
+.info-componente-grande:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
+    z-index: -1;
+}
+
+.info-componente-grande .lenguaje,
+.info-componente-grande .año,
+.info-componente-grande .episodio {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+    color: black;
+    margin-right: 10px;
+}
+
 /*NAVEGACION PRINCIPAL*/
 
 .navegacion-principal {
@@ -575,108 +661,24 @@ a {
 
 /*ULTIMOS LANZAMIENTOS*/
 
-.lanzamientos .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.lanzamientos .header a {
-    text-transform: capitalize;
-}
-
-.contenedor-lanzamientos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-}
-
-.componente-lanzamiento {
-    height: 70vw;
-    max-height: 370px;
-    background: url(../images/nuevos/5e2beeeba2ad0.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-}
-
-.componente-lanzamiento:hover .nombre-lanzamiento {
-    visibility: visible;
-    opacity: 1;
-}
-
-.nombre-lanzamiento {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.562);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .1s ease-in-out;
-}
-
-.nombre-lanzamiento span {
-    text-transform: capitalize;
-}
-
-.info-lanzamiento {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0px 10px 10px;
-}
-
-.info-lanzamiento:after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
-    z-index: -1;
-}
-
-.info-lanzamiento .lenguaje,
-.episodio {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    border-radius: 5px;
-    padding: 5px;
-    background: white;
-    color: black;
-}
-
-.info-lanzamiento .lenguaje {
-    background: white;
-    color: black;
-}
-
 .info-lanzamiento .episodio {
     background: var(--color-secundario);
     color: white;
+    margin-left: auto;
 }
 
 .info-lanzamiento .hora {
     margin-top: 10px;
     font-size: 0.75rem;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.info-lanzamiento img {
+.info-lanzamiento .hora img {
     height: 15px;
     width: 15px;
+    margin-right: 5px;
 }
 
 /*QUERYS LANZAMIENTOS*/
@@ -803,5 +805,21 @@ a {
     .descripcion-recomendado {
         flex: 3 1;
         margin: 0px;
+    }
+}
+
+/*PELICULAS*/
+
+/*QUERYS PELICULAS*/
+
+@media (min-width:580px) {
+    .contenedor-peliculas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:768px) {
+    .contenedor-peliculas {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
