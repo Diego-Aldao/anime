@@ -15,6 +15,7 @@
 body {
     background: black;
     color: white;
+    padding-bottom: 50px;
 }
 
 h1,
@@ -31,7 +32,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.75rem, 6vw, 3rem);
+    font-size: clamp(1.75rem, 6vw, 2.8rem);
 }
 
 h3 {
@@ -574,10 +575,6 @@ a {
 
 /*ULTIMOS LANZAMIENTOS*/
 
-.lanzamientos {
-    padding-bottom: 50px;
-}
-
 .lanzamientos .header {
     display: flex;
     justify-content: space-between;
@@ -707,5 +704,104 @@ a {
 
     .nombre-lanzamiento span {
         font-size: 1.2rem;
+    }
+}
+
+/*RECOMENDADOS*/
+
+.imagen-recomendado {
+    width: 150px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.imagen-recomendado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.descripcion-recomendado {
+    margin-top: 20px;
+}
+
+.descripcion-recomendado h2 {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion-recomendado .img-guardado {
+    width: 34px;
+    margin-left: 70px;
+}
+
+.info-recomendado {
+    display: flex;
+    margin-top: 15px;
+}
+
+.info-recomendado span,
+.generos-recomendado span {
+    background: white;
+    color: black;
+    padding: 5px 8px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.info-recomendado .episodios,
+.generos-recomendado span {
+    background: var(--color-secundario);
+    color: white;
+}
+
+.generos-recomendado {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.generos-recomendado span {
+    font-size: 0.65rem;
+}
+
+.descripcion-recomendado .parrafo-principal {
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.descripcion-recomendado .btn {
+    background: var(--color-secundario);
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*QUERYS RECOMENDADOS*/
+
+@media (min-width:580px) {
+    .imagen-recomendado {
+        width: 220px;
+        height: 320px;
+    }
+}
+
+@media (min-width:768px) {
+    .componente-recomendado {
+        display: flex;
+        height: 280px;
+    }
+
+    .imagen-recomendado {
+        flex: 190px 0;
+        height: 280px;
+        margin-right: 20px;
+    }
+
+    .descripcion-recomendado {
+        flex: 3 1;
+        margin: 0px;
     }
 }
